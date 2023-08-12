@@ -144,7 +144,11 @@
   </div>
   
   
-  <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
+  <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 pl-[24px] pr-[24px]" style="z-index:100">
+  <div id="menu-blur" class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl"></div>
+  <div class="relative max-w-[64rem] ml-auto mr-auto">
+    <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
     class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start space-x-3">
     
     <div class="flex flex-1 items-center justify-between">
@@ -169,9 +173,9 @@
 
             
             
-  <a href=""  class="flex items-center">
+  <a href="/categories/publication/"  class="flex items-center">
     
-    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="">
+    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="Publication">
         PUBLICATIONS
     </p>
 </a>
@@ -182,7 +186,7 @@
   <div>
   <div class="cursor-pointer flex items-center nested-menu">
     
-    <a  class="text-base font-medium text-gray-500 hover:text-gray-900" title="">
+    <a  href="/categories/project/"   class="text-base font-medium text-gray-500 hover:text-gray-900" title="Project">
       PROJECT
     </a>
     <span>
@@ -211,9 +215,9 @@
     <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl">
       <div class="flex flex-col space-y-3">
         
-        <a href=""  class="flex items-center">
+        <a href="/categories/colocation/"  class="flex items-center">
           
-          <p class="text-sm font-sm text-gray-500 hover:text-gray-900" title="">
+          <p class="text-sm font-sm text-gray-500 hover:text-gray-900" title="Colocation">
             1_colocation
           </p>
         </a>
@@ -222,6 +226,13 @@
           
           <p class="text-sm font-sm text-gray-500 hover:text-gray-900" title="">
             2_MMGWR
+          </p>
+        </a>
+        
+        <a href=""  class="flex items-center">
+          
+          <p class="text-sm font-sm text-gray-500 hover:text-gray-900" title="">
+            3_historic street
           </p>
         </a>
         
@@ -392,9 +403,9 @@
 
                     
   <li class="mt-1">
-    <a href=""  class="flex items-center">
+    <a href="/categories/publication/"  class="flex items-center">
         
-        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="">
+        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="Publication">
             PUBLICATIONS
         </p>
     </a>
@@ -408,7 +419,7 @@
   <li class="mt-1">
     <a class="flex items-center">
         
-        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="">
+        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="Project">
             PROJECT
         </p>
         <span>
@@ -436,9 +447,9 @@
 </li>
 
 <li class="mt-1">
-    <a href=""  class="flex items-center">
+    <a href="/categories/colocation/"  class="flex items-center">
         
-        <p class="text-sm font-small text-gray-500 hover:text-gray-900" title="">
+        <p class="text-sm font-small text-gray-500 hover:text-gray-900" title="Colocation">
             1_colocation
         </p>
     </a>
@@ -449,6 +460,15 @@
         
         <p class="text-sm font-small text-gray-500 hover:text-gray-900" title="">
             2_MMGWR
+        </p>
+    </a>
+</li>
+
+<li class="mt-1">
+    <a href=""  class="flex items-center">
+        
+        <p class="text-sm font-small text-gray-500 hover:text-gray-900" title="">
+            3_historic street
         </p>
     </a>
 </li>
@@ -486,6 +506,16 @@
 
 
 
+  </div>
+</div>
+<script>
+  window.addEventListener('scroll', function (e) {
+    var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    var background_blur = document.getElementById('menu-blur');
+    background_blur.style.opacity = (scroll / 300);
+  });
+</script>
+
   
   <div class="relative flex flex-col grow">
     <main id="main-content" class="grow">
@@ -507,6 +537,43 @@
   
 
   <header id="single_header" class="mt-5 max-w-prose">
+    
+    <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="inline hidden">
+    <a
+      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
+      href="/"
+      >XIE JINFENG</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline ">
+    <a
+      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
+      href="/post/"
+      >Posts</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline hidden">
+    <a
+      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
+      href="/post/post1/"
+      >15类城市的功能同位概率研究</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
       15类城市的功能同位概率研究
@@ -574,46 +641,71 @@
 </div>
 
 
-
-
-
-
-
-    </div>
-
-    
-    
-    
-    
-    
-
-    
-    
-    <div class="flex">
+<div class="flex flex-row flex-wrap items-center">
   
   
   
   
-  <img class="!mt-0 !mb-0 h-24 w-24 rounded-full ltr:mr-4 rtl:ml-4" width="96" height="96"
-    alt="XIE JINFENG" src="/img/blowfish_logo_hu184ea2fa12490a2458ca388a16ab730e_227816_192x192_fill_box_center_3.png" />
   
   
-  <div class="place-self-center">
-    
-    <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
-      Author
-    </div>
-    <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
-      XIE JINFENG
-    </div>
-    
-    
-    <div class="text-sm text-neutral-700 dark:text-neutral-400">A little bit about you</div>
-    
-    <div class="text-2xl sm:text-lg">
+  
+  
+  
+  
+  
 </div>
-  </div>
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/project/&#34;,'_self');">
+    <span class="flex">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
+  >
+    Project
+  </span>
+</span>
+
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/categories/colocation/&#34;,'_self');">
+    <span class="flex">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
+  >
+    Colocation
+  </span>
+</span>
+
+  </span>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 </div>
+
+
+
+    </div>
+
+    
+    
+    
+    
     
 
     
@@ -621,14 +713,71 @@
     
 
     
-    <div class="mb-5"></div>
+
     
   
   </header>
   
   <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
     
-    
+     <div
+      class="order-first sm:max-w-prose lg:ml-auto px-0 lg:order-last lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-[140px]">
+
+         <details open class="mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#对于同位概率的理解">对于同位概率的理解：</a></li>
+    <li><a href="#方法">方法</a></li>
+    <li><a href="#结果基本与预期不太一致不同等级的城市组内和组间的差别不大反倒是1级和3级城市的比例比较低">结果基本与预期不太一致：不同等级的城市组内和组间的差别不大，反倒是1级和3级城市的比例比较低</a></li>
+    <li><a href="#同时认识到原本gephi中显示的值是最大值两类功能相关性的最大值的意义需要再讨论可能平均值更合理一点">同时认识到原本gephi中显示的值是最大值，两类功能相关性的最大值的意义需要再讨论，可能平均值更合理一点</a></li>
+    <li><a href="#两个维度的讨论">两个维度的讨论：</a></li>
+    <li><a href="#1108数据检查尝试">1108数据检查尝试</a></li>
+    <li><a href="#新结论">新结论</a></li>
+    <li><a href="#和龙老师交流">和龙老师交流</a></li>
+    <li><a href="#对之前的结论进行可视化并以北京二环内西北角举例做实验">对之前的结论进行可视化，并以北京二环内西北角举例做实验</a></li>
+    <li><a href="#0115幂律定律-本质是地理学第一定律的反映">0115幂律定律-本质是地理学第一定律的反映</a></li>
+    <li><a href="#关于方法有效性的探讨">关于方法有效性的探讨</a></li>
+    <li><a href="#基于文献的一些研究想法">基于文献的一些研究想法：</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#对于同位概率的理解">对于同位概率的理解：</a></li>
+    <li><a href="#方法">方法</a></li>
+    <li><a href="#结果基本与预期不太一致不同等级的城市组内和组间的差别不大反倒是1级和3级城市的比例比较低">结果基本与预期不太一致：不同等级的城市组内和组间的差别不大，反倒是1级和3级城市的比例比较低</a></li>
+    <li><a href="#同时认识到原本gephi中显示的值是最大值两类功能相关性的最大值的意义需要再讨论可能平均值更合理一点">同时认识到原本gephi中显示的值是最大值，两类功能相关性的最大值的意义需要再讨论，可能平均值更合理一点</a></li>
+    <li><a href="#两个维度的讨论">两个维度的讨论：</a></li>
+    <li><a href="#1108数据检查尝试">1108数据检查尝试</a></li>
+    <li><a href="#新结论">新结论</a></li>
+    <li><a href="#和龙老师交流">和龙老师交流</a></li>
+    <li><a href="#对之前的结论进行可视化并以北京二环内西北角举例做实验">对之前的结论进行可视化，并以北京二环内西北角举例做实验</a></li>
+    <li><a href="#0115幂律定律-本质是地理学第一定律的反映">0115幂律定律-本质是地理学第一定律的反映</a></li>
+    <li><a href="#关于方法有效性的探讨">关于方法有效性的探讨</a></li>
+    <li><a href="#基于文献的一些研究想法">基于文献的一些研究想法：</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+   </div>
+      </div>
+      
 
       <div class="min-w-0 min-h-0 max-w-fit">
         
@@ -1233,20 +1382,18 @@ collapsed:: true
     
     
     
+      
+      
+    
     <div class="pt-8">
       <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/post/post2/post2/">
-              <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
-              <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
+        </span>
+        <span>
+          
+            <a class="flex text-right group ml-3" href="/post/post2/post2/">
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
@@ -1258,10 +1405,15 @@ collapsed:: true
                   
                 </span>
               </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
             </a>
-          
-        </span>
-        <span>
           
         </span>
       </div>
@@ -1313,14 +1465,6 @@ collapsed:: true
     
 
     
-    
-    <p class="text-xs text-neutral-500 dark:text-neutral-400">
-      
-      
-      Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
-        href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
-        href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
-    </p>
     
 
   </div>

@@ -114,7 +114,11 @@
   </div>
   
   
-  <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
+  <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 pl-[24px] pr-[24px]" style="z-index:100">
+  <div id="menu-blur" class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl"></div>
+  <div class="relative max-w-[64rem] ml-auto mr-auto">
+    <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
     class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start space-x-3">
     
     <div class="flex flex-1 items-center justify-between">
@@ -139,9 +143,9 @@
 
             
             
-  <a href=""  class="flex items-center">
+  <a href="/categories/publication/"  class="flex items-center">
     
-    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="">
+    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="Publication">
         PUBLICATIONS
     </p>
 </a>
@@ -152,7 +156,7 @@
   <div>
   <div class="cursor-pointer flex items-center nested-menu">
     
-    <a  class="text-base font-medium text-gray-500 hover:text-gray-900" title="">
+    <a  href="/categories/project/"   class="text-base font-medium text-gray-500 hover:text-gray-900" title="Project">
       PROJECT
     </a>
     <span>
@@ -181,9 +185,9 @@
     <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl">
       <div class="flex flex-col space-y-3">
         
-        <a href=""  class="flex items-center">
+        <a href="/categories/colocation/"  class="flex items-center">
           
-          <p class="text-sm font-sm text-gray-500 hover:text-gray-900" title="">
+          <p class="text-sm font-sm text-gray-500 hover:text-gray-900" title="Colocation">
             1_colocation
           </p>
         </a>
@@ -192,6 +196,13 @@
           
           <p class="text-sm font-sm text-gray-500 hover:text-gray-900" title="">
             2_MMGWR
+          </p>
+        </a>
+        
+        <a href=""  class="flex items-center">
+          
+          <p class="text-sm font-sm text-gray-500 hover:text-gray-900" title="">
+            3_historic street
           </p>
         </a>
         
@@ -362,9 +373,9 @@
 
                     
   <li class="mt-1">
-    <a href=""  class="flex items-center">
+    <a href="/categories/publication/"  class="flex items-center">
         
-        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="">
+        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="Publication">
             PUBLICATIONS
         </p>
     </a>
@@ -378,7 +389,7 @@
   <li class="mt-1">
     <a class="flex items-center">
         
-        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="">
+        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="Project">
             PROJECT
         </p>
         <span>
@@ -406,9 +417,9 @@
 </li>
 
 <li class="mt-1">
-    <a href=""  class="flex items-center">
+    <a href="/categories/colocation/"  class="flex items-center">
         
-        <p class="text-sm font-small text-gray-500 hover:text-gray-900" title="">
+        <p class="text-sm font-small text-gray-500 hover:text-gray-900" title="Colocation">
             1_colocation
         </p>
     </a>
@@ -419,6 +430,15 @@
         
         <p class="text-sm font-small text-gray-500 hover:text-gray-900" title="">
             2_MMGWR
+        </p>
+    </a>
+</li>
+
+<li class="mt-1">
+    <a href=""  class="flex items-center">
+        
+        <p class="text-sm font-small text-gray-500 hover:text-gray-900" title="">
+            3_historic street
         </p>
     </a>
 </li>
@@ -455,6 +475,16 @@
 
 
 
+
+  </div>
+</div>
+<script>
+  window.addEventListener('scroll', function (e) {
+    var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    var background_blur = document.getElementById('menu-blur');
+    background_blur.style.opacity = (scroll / 300);
+  });
+</script>
 
   
   <div class="relative flex flex-col grow">
@@ -502,14 +532,6 @@
     
 
     
-    
-    <p class="text-xs text-neutral-500 dark:text-neutral-400">
-      
-      
-      Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
-        href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
-        href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
-    </p>
     
 
   </div>
