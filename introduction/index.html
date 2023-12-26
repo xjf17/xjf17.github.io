@@ -134,6 +134,29 @@
   <meta name="theme-color"/>
   
   
+  
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script>
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDwyG4rFXdzJbqEep2UiiqigJqAPSLvzmk",
+      authDomain: "AIzaSyDwyG4rFXdzJbqEep2UiiqigJqAPSLvzmk",
+      projectId: "personal-website-e5513",
+      storageBucket: "personal-website-e5513.appspot.com",
+      messagingSenderId: "178732553974",
+      appId: "1:178732553974:web:036633136b17ee5f9cfed7",
+      measurementId: "G-S0YESDKJ2Y"
+    };
+
+    var app = firebase.initializeApp(firebaseConfig);
+    var db = firebase.firestore();
+    var auth = firebase.auth();
+
+  </script>
+  
+  
 </head>
 <body
   class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32">
