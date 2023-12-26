@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2023 XIE JINFENG</copyright>
-    <lastBuildDate>Wed, 01 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xjf17.github.io/series/publication/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xjf17.github.io/series/publication/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reinterpretation of the Dynamics of Urban Renewal Based on Multiple Rent Gaps: Taking Langyuan Vintage and Tianzifang as Examples</title>
+      <link>https://xjf17.github.io/publication/rentgap/</link>
+      <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xjf17.github.io/publication/rentgap/</guid>
+      <description>Abstract # Under the requirement of limited or even negative urban land increment, understanding the motivations for urban regeneration and promoting sustainable regeneration practices constitute crucial issues in the contemporary planning studies.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xjf17.github.io/publication/rentgap/feature.jpg" />
+    </item>
+    
     <item>
       <title>Mechanisms and Strategies of Night Market Governance in the Perspective of Informal Economy: Hangzhou as an Example</title>
       <link>https://xjf17.github.io/publication/night_market/</link>
@@ -16,16 +26,6 @@
       <guid>https://xjf17.github.io/publication/night_market/</guid>
       <description>Abstract # How to govern the informal economy is an important issue in the move towards inclusive and refined urban governance.</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xjf17.github.io/publication/night_market/featured1.png" />
-    </item>
-    
-    <item>
-      <title>Reinterpretation of the Dynamics of Urban Renewal Based on Multiple Rent Gaps: Taking Langyuan Vintage and Tianzifang as Examples</title>
-      <link>https://xjf17.github.io/publication/rentgap/</link>
-      <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://xjf17.github.io/publication/rentgap/</guid>
-      <description>Abstract # Under the requirement of limited or even negative urban land increment, understanding the motivations for urban regeneration and promoting sustainable regeneration practices constitute crucial issues in the contemporary planning studies.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xjf17.github.io/publication/rentgap/feature.jpg" />
     </item>
     
   </channel>
