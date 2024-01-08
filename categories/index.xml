@@ -6,7 +6,7 @@
     <description>Recent content in Categories on XIE JINFENG</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <copyright>© 2023 XIE JINFENG</copyright>
+    <copyright>© 2024 XIE JINFENG</copyright>
     <lastBuildDate>Fri, 22 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xjf17.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Posts</title>
@@ -74,6 +74,16 @@
       <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://xjf17.github.io/categories/project/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Design</title>
+      <link>https://xjf17.github.io/categories/design/</link>
+      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://xjf17.github.io/categories/design/</guid>
       <description></description>
       
     </item>
