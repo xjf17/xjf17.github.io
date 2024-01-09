@@ -175,20 +175,11 @@
     
   
     
-      <url>
-            <loc>https://xjf17.github.io/design/cube30/</loc>
-            <lastmod>2017-12-01T00:00:00+00:00</lastmod>
-            <changefreq>daily</changefreq>
-            <priority>0.5</priority>
-          </url>
-    
-  
-    
   
     
       <url>
             <loc>https://xjf17.github.io/design/</loc>
-            <lastmod>2017-12-01T00:00:00+00:00</lastmod>
+            <lastmod>2020-12-01T00:00:00+00:00</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
@@ -197,6 +188,16 @@
     
       <url>
             <loc>https://xjf17.github.io/design/tongniu/</loc>
+            <lastmod>2020-12-01T00:00:00+00:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://xjf17.github.io/design/cube30/</loc>
+            <lastmod>2017-12-01T00:00:00+00:00</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
