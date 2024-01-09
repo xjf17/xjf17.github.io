@@ -19,6 +19,16 @@
     </item>
     
     <item>
+      <title>15类城市的功能同位概率研究</title>
+      <link>https://xjf17.github.io/project/15%E7%B1%BB%E5%9F%8E%E5%B8%82%E7%9A%84%E5%8A%9F%E8%83%BD%E5%90%8C%E4%BD%8D%E7%A0%94%E7%A9%B6/</link>
+      <pubDate>Fri, 21 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://xjf17.github.io/project/15%E7%B1%BB%E5%9F%8E%E5%B8%82%E7%9A%84%E5%8A%9F%E8%83%BD%E5%90%8C%E4%BD%8D%E7%A0%94%E7%A9%B6/</guid>
+      <description>对于同位概率的理解： # 根据条件概率的公式，A和B之间的同位概率=2，用语言表述就是： 1）当一个格子有B出现时，会让这个格子里有A出现的概率是其平均值的2倍， 2）当一个格子有A出现时，会让这个格子里有B出现的概率是其平均值的2倍 所以同位概率首先是有上限的，上限是这个格子一定出现，也就是“1/这类功能出现的概率”，即“1/这类功能的比例” 这里要讨论一个概念，就是数值的标准化问题，究竟应该比较同位概率的倍数，还是比较当功能A出现时，功能B出现的概率 比如11级城市A和B的同位概率是2，12级城市A和B的同位概率是2.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://xjf17.github.io/project/15%E7%B1%BB%E5%9F%8E%E5%B8%82%E7%9A%84%E5%8A%9F%E8%83%BD%E5%90%8C%E4%BD%8D%E7%A0%94%E7%A9%B6/featured1.jpg" />
+    </item>
+    
+    <item>
       <title>Database for the Regeneration of the Historic District</title>
       <link>https://xjf17.github.io/project/street_map/</link>
       <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate>
