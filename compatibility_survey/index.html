@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>兼容性排序调研</title>
+    <link rel="stylesheet" href="./survey.css">
+</head>
+<body>
+    <main class="container">
+        <section id="start-section" class="panel start-panel">
+            <div class="survey-intro">
+                <p class="eyebrow">兼容性排序调研 · 基本信息</p>
+                <h1>参与者信息</h1>
+                <p class="intro-copy">请填写以下信息。带有 <span class="required-mark">*</span> 的项目为必填项。</p>
+            </div>
+
+            <form id="start-form" class="questionnaire-form">
+                <fieldset>
+                    <legend>个人基本信息</legend>
+                    <div class="form-grid">
+                        <div class="form-field">
+                            <label for="participant-name">
+                                <span><span class="question-number">1</span>姓名<span class="required-mark">*</span></span>
+                            </label>
+                            <input id="participant-name" type="text" name="participant_name" autocomplete="name" required>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="participant-age">
+                                <span><span class="question-number">2</span>年龄<span class="required-mark">*</span></span>
+                            </label>
+                            <input id="participant-age" type="number" name="age" min="1" max="120" step="1" inputmode="numeric" placeholder="请输入年龄" required>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="education-level">
+                                <span><span class="question-number">3</span>受教育水平<span class="required-mark">*</span></span>
+                            </label>
+                            <select id="education-level" name="education_level" required>
+                                <option value="" selected disabled>请选择</option>
+                                <option value="初中及以下">初中及以下</option>
+                                <option value="高中或中专">高中或中专</option>
+                                <option value="大专">大专</option>
+                                <option value="本科">本科</option>
+                                <option value="硕士">硕士</option>
+                                <option value="博士">博士</option>
+                            </select>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="gender">
+                                <span><span class="question-number">4</span>性别<span class="required-mark">*</span></span>
+                            </label>
+                            <select id="gender" name="gender" required>
+                                <option value="" selected disabled>请选择</option>
+                                <option value="男">男</option>
+                                <option value="女">女</option>
+                            </select>
+                        </div>
+
+                        <div class="form-field form-field-wide">
+                            <label for="residence-city">
+                                <span><span class="question-number">5</span>过去一年的常住城市<span class="required-mark">*</span></span>
+                            </label>
+                            <input id="residence-city" type="text" name="residence_city" autocomplete="address-level2" placeholder="请输入城市名称" required>
+                        </div>
+
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>相关兴趣与经历</legend>
+                    <div class="form-grid">
+                        <div class="form-field form-field-wide">
+                            <label for="heritage-interest">
+                                <span><span class="question-number">6</span>对建筑遗产、历史建筑的感兴趣程度<span class="required-mark">*</span></span>
+                            </label>
+                            <select id="heritage-interest" name="heritage_interest" required>
+                                <option value="" selected disabled>请选择</option>
+                                <option value="非常不感兴趣">非常不感兴趣</option>
+                                <option value="较不感兴趣">较不感兴趣</option>
+                                <option value="一般">一般</option>
+                                <option value="较感兴趣">较感兴趣</option>
+                                <option value="非常感兴趣">非常感兴趣</option>
+                            </select>
+                        </div>
+
+                        <div class="form-field form-field-wide">
+                            <label for="relevant-experience-duration">
+                                <span><span class="question-number">7</span>是否参与过设计学、建筑学、城市规划学、遗产保护学等相关学科的教育，或者从事需要相关技能的工作<span class="required-mark">*</span></span>
+                            </label>
+                            <select id="relevant-experience-duration" name="relevant_experience_duration" required>
+                                <option value="" selected disabled>请选择</option>
+                                <option value="一年以下">一年以下</option>
+                                <option value="一年至三年">一年至三年</option>
+                                <option value="三年至五年">三年至五年</option>
+                                <option value="五年至七年">五年至七年</option>
+                                <option value="七至九年">七至九年</option>
+                                <option value="九年以上">九年以上</option>
+                            </select>
+                        </div>
+
+                        <div class="form-field form-field-wide">
+                            <label for="heritage-related-experience">
+                                <span><span class="question-number">8</span>是否参与过历史建筑或历史街区保护、遗产价值分析、遗产区域附近的城市设计及类似相关工作，包括未建成的项目及类似的设计课程训练<span class="required-mark">*</span></span>
+                            </label>
+                            <select id="heritage-related-experience" name="heritage_related_experience" required>
+                                <option value="" selected disabled>请选择</option>
+                                <option value="未参与过">未参与过</option>
+                                <option value="参与过1-3个">参与过1-3个</option>
+                                <option value="参与过3-10个">参与过3-10个</option>
+                                <option value="参与过10个以上">参与过10个以上</option>
+                            </select>
+                        </div>
+
+                        <div class="form-field form-field-wide">
+                            <label for="nationality">
+                                <span><span class="question-number">9</span>您的国籍是<span class="required-mark">*</span></span>
+                            </label>
+                            <input id="nationality" type="text" name="nationality" autocomplete="country-name" placeholder="请输入国籍" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="form-footer">
+                    <p class="form-note">请确认所有信息填写无误后开始问卷。</p>
+                    <button type="submit">开始问卷</button>
+                </div>
+            </form>
+            <p id="start-error" class="error hidden"></p>
+        </section>
+
+        <section id="survey-section" class="panel hidden">
+            <header class="survey-header">
+                <div>
+                    <h2 id="question-title"></h2>
+                    <p id="question-progress" class="muted"></p>
+                </div>
+                <div class="id-box">
+                    <span>匿名ID：</span><code id="auto-id"></code>
+                </div>
+            </header>
+
+            <p id="stage-hint" class="stage-hint">图中这栋建筑是历史建筑或文化遗产，现有几个周边环境的选项，请评估周围环境与该建筑看起来是否协调，周围的建筑是否与当前建筑兼容。请按兼容性拖拽排序，数字 1 表示最兼容，数字越大表示越不兼容。</p>
+
+            <div id="image-row" class="image-row"></div>
+
+            <div id="actions-initial" class="actions">
+                <button id="submit-initial-btn" type="button">提交初次排序</button>
+            </div>
+
+            <div id="info-panel" class="info-panel hidden">
+                <h3>补充信息</h3>
+                <p id="info-text">这是一处具有重要历史文化价值的建筑遗产。它不仅承载着特定时代的城市记忆，也体现了建筑工艺、空间组织与社会生活方式的演变。请在了解以上背景后，重新审视你刚才的排序，并判断是否需要调整。</p>
+                <p class="muted">在了解以上信息后，你是否需要调整排序？</p>
+                <div class="actions">
+                    <button id="keep-order-btn" type="button">不更改，下一题</button>
+                    <button id="submit-final-btn" type="button">确认当前排序并下一题</button>
+                </div>
+            </div>
+
+            <p id="survey-error" class="error hidden"></p>
+        </section>
+
+        <section id="finish-section" class="panel hidden">
+            <h2>问卷已完成</h2>
+            <p>感谢参与，本次排序任务已全部结束。</p>
+        </section>
+    </main>
+
+    <div id="image-modal" class="modal hidden" role="dialog" aria-modal="true">
+        <button id="modal-close" class="modal-close" type="button">关闭</button>
+        <img id="modal-image" src="" alt="放大预览">
+    </div>
+
+    <script src="./config.js"></script>
+    <script src="./survey.js"></script>
+</body>
+</html>
