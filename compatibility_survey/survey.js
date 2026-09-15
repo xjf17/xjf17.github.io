@@ -7,9 +7,11 @@
         sessionUuid: "",
         autoParticipantUuid: "",
         infoTextVersion: "",
+        rankingInstruction: "",
         questions: [],
         currentIndex: 0,
         initialOrder: [],
+        breakpointRank: "",
         dragSource: null,
     };
 
@@ -28,6 +30,10 @@
     const imageRow = document.getElementById("image-row");
     const infoPanel = document.getElementById("info-panel");
     const infoText = document.getElementById("info-text");
+    const breakpointPanel = document.getElementById("breakpoint-panel");
+    const breakpointQuestion = document.getElementById("breakpoint-question");
+    const breakpointOptions = document.getElementById("breakpoint-options");
+    const continueInfoBtn = document.getElementById("continue-info-btn");
 
     const actionsInitial = document.getElementById("actions-initial");
     const submitInitialBtn = document.getElementById("submit-initial-btn");
@@ -84,12 +90,14 @@
         setError(surveyError, "");
         afterInfoPhase = false;
         state.initialOrder = [];
+        state.breakpointRank = "";
 
-        questionTitle.textContent = `题目：${question.folder_name}`;
+        questionTitle.textContent = `第 ${state.currentIndex + 1} 题`;
         questionProgress.textContent = `第 ${state.currentIndex + 1} / ${state.questions.length} 题`;
-        stageHint.textContent = "图中这栋建筑是历史建筑或文化遗产，现有几个周边环境的选项，请评估周围环境与该建筑看起来是否协调，周围的建筑是否与当前建筑兼容。请按兼容性拖拽排序，数字 1 表示最兼容，数字越大表示越不兼容。";
+        stageHint.textContent = state.rankingInstruction;
 
         actionsInitial.classList.remove("hidden");
+        breakpointPanel.classList.add("hidden");
         infoPanel.classList.add("hidden");
 
         imageRow.innerHTML = "";
@@ -138,6 +146,47 @@
         });
 
         updateRanks();
+    }
+
+    function escapeHtml(value) {
+        return String(value || "").replace(/[&<>"']/g, (character) => ({
+            "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+        }[character]));
+    }
+
+    function buildHeritageInfoText(question) {
+        const metadata = question.heritage_metadata || {};
+        const name = escapeHtml(metadata.name || question.folder_name || "未命名建筑");
+        const batch = escapeHtml(metadata.batch || "未知");
+        const period = escapeHtml(metadata.period || "未知");
+        const introduction = escapeHtml(metadata.introduction || "暂无简介。");
+        return `上述历史建筑为 ${name}，是<strong>第${batch}批全国重点文物保护单位</strong>，该历史建筑建成于 <strong>${period} 时期</strong>，其相关信息简介如下：<br><strong>${introduction}</strong>`;
+    }
+
+    function renderBreakpointQuestion() {
+        const question = currentQuestion();
+        breakpointOptions.innerHTML = "";
+        question.images.forEach((_, index) => {
+            const option = document.createElement("button");
+            option.type = "button";
+            option.className = "breakpoint-option";
+            option.dataset.rank = String(index + 1);
+            option.textContent = String(index + 1);
+            option.setAttribute("role", "radio");
+            option.setAttribute("aria-checked", "false");
+            option.addEventListener("click", () => {
+                state.breakpointRank = option.dataset.rank;
+                breakpointOptions.querySelectorAll(".breakpoint-option").forEach((item) => {
+                    const selected = item === option;
+                    item.classList.toggle("selected", selected);
+                    item.setAttribute("aria-checked", String(selected));
+                });
+                setError(surveyError, "");
+            });
+            breakpointOptions.appendChild(option);
+        });
+        breakpointQuestion.textContent =
+            "根据以上的排序，如果您选择一张图片，作为您心目中协调与不协调的分界线，即序号小于该图片的，您会基本评价其为“遗产与环境协调”，序号大于该图片的，您就会评价其为“遗产与环境不协调”，你会选择序号：";
     }
 
     function bindDragEvents(card) {
@@ -225,6 +274,7 @@
             state.sessionUuid = data.session_uuid;
             state.autoParticipantUuid = data.auto_participant_uuid;
             state.infoTextVersion = data.info_text_version;
+            state.rankingInstruction = data.ranking_instruction || "";
             state.questions = data.questions || [];
             state.currentIndex = 0;
 
@@ -259,8 +309,10 @@
             state.initialOrder = order.slice();
             afterInfoPhase = true;
             actionsInitial.classList.add("hidden");
-            infoPanel.classList.remove("hidden");
-            stageHint.textContent = "已展示补充信息。你可以保持不变，或继续拖拽后确认。";
+            renderBreakpointQuestion();
+            breakpointPanel.classList.remove("hidden");
+            infoPanel.classList.add("hidden");
+            stageHint.textContent = "请先选择协调与不协调的分界序号。";
         } catch (error) {
             setError(surveyError, `提交失败：${error.message}`);
         } finally {
@@ -272,6 +324,10 @@
         setError(surveyError, "");
         if (!afterInfoPhase) {
             setError(surveyError, "请先提交初次排序。");
+            return;
+        }
+        if (!state.breakpointRank) {
+            setError(surveyError, "请先选择协调与不协调的分界序号。");
             return;
         }
 
@@ -290,6 +346,7 @@
                 question_folder: question.folder_name,
                 image_order_initial: state.initialOrder,
                 image_order_final: forceNoChange ? state.initialOrder : finalOrder,
+                breakpoint_rank: Number(state.breakpointRank),
                 changed_after_info: changed,
             });
             state.currentIndex += 1;
@@ -304,6 +361,16 @@
 
     startForm.addEventListener("submit", onStartSurvey);
     submitInitialBtn.addEventListener("click", onSubmitInitial);
+    continueInfoBtn.addEventListener("click", () => {
+        if (!state.breakpointRank) {
+            setError(surveyError, "请选择一个分界序号。");
+            return;
+        }
+        breakpointPanel.classList.add("hidden");
+        infoPanel.classList.remove("hidden");
+        infoText.innerHTML = buildHeritageInfoText(currentQuestion());
+        stageHint.textContent = "已展示补充信息。你可以保持不变，或继续拖拽后确认。";
+    });
     keepOrderBtn.addEventListener("click", () => submitFinalAndNext(true));
     submitFinalBtn.addEventListener("click", () => submitFinalAndNext(false));
 

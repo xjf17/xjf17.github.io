@@ -142,7 +142,7 @@
                 </div>
             </header>
 
-            <p id="stage-hint" class="stage-hint">图中这栋建筑是历史建筑或文化遗产，现有几个周边环境的选项，请评估周围环境与该建筑看起来是否协调，周围的建筑是否与当前建筑兼容。请按兼容性拖拽排序，数字 1 表示最兼容，数字越大表示越不兼容。</p>
+            <p id="stage-hint" class="stage-hint"></p>
 
             <div id="image-row" class="image-row"></div>
 
@@ -150,13 +150,22 @@
                 <button id="submit-initial-btn" type="button">提交初次排序</button>
             </div>
 
+            <div id="breakpoint-panel" class="breakpoint-panel hidden">
+                <h3>协调与不协调的分界</h3>
+                <p id="breakpoint-question" class="breakpoint-question"></p>
+                <div id="breakpoint-options" class="breakpoint-options" role="radiogroup" aria-label="协调与不协调的分界序号"></div>
+                <div class="actions">
+                    <button id="continue-info-btn" type="button">确认</button>
+                </div>
+            </div>
+
             <div id="info-panel" class="info-panel hidden">
-                <h3>补充信息</h3>
-                <p id="info-text">这是一处具有重要历史文化价值的建筑遗产。它不仅承载着特定时代的城市记忆，也体现了建筑工艺、空间组织与社会生活方式的演变。请在了解以上背景后，重新审视你刚才的排序，并判断是否需要调整。</p>
-                <p class="muted">在了解以上信息后，你是否需要调整排序？</p>
+                <h3>排序调整</h3>
+                <p id="info-text"></p>
+                <p class="muted">在了解以上信息后，你是否需要调整排序？如果你觉得需要调整排序，则可再次拖拽调整，调整好后，点击“确认排序并下一题”，如果觉得不需要调整，则点击“不更改，下一题”。</p>
                 <div class="actions">
                     <button id="keep-order-btn" type="button">不更改，下一题</button>
-                    <button id="submit-final-btn" type="button">确认当前排序并下一题</button>
+                    <button id="submit-final-btn" type="button">确认排序并下一题</button>
                 </div>
             </div>
 

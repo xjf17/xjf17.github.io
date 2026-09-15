@@ -14,16 +14,23 @@ body {
 }
 
 .container {
-    max-width: 980px;
+    width: 90%;
+    max-width: none;
     margin: 0 auto;
-    padding: 48px 20px 64px;
+    padding: 24px 0 48px;
+}
+
+.start-panel {
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .panel {
     background: #ffffff;
     border: 1px solid #dbe2ea;
     border-radius: 8px;
-    padding: 32px;
+    padding: 28px;
     box-shadow: 0 12px 32px rgba(35, 52, 70, 0.08);
 }
 
@@ -87,7 +94,7 @@ fieldset + fieldset {
 legend {
     padding: 0;
     color: #243447;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
 }
 
@@ -111,7 +118,7 @@ label {
     flex-direction: column;
     gap: 8px;
     color: #263749;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 600;
     line-height: 1.6;
 }
@@ -139,7 +146,7 @@ select {
     background: #ffffff;
     color: #1e2732;
     font: inherit;
-    font-size: 14px;
+    font-size: 16px;
     outline: none;
     transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
@@ -171,7 +178,7 @@ select:invalid {
 .form-note {
     margin: 0;
     color: #66758a;
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.6;
 }
 
@@ -182,7 +189,7 @@ button {
     background: #245d9c;
     color: #fff;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 600;
     white-space: nowrap;
 }
@@ -198,6 +205,7 @@ button:disabled {
 
 .muted {
     color: #66758a;
+    font-size: 17px;
 }
 
 .error {
@@ -219,15 +227,21 @@ button:disabled {
     background: #eef4ff;
 }
 
+.survey-header h2 {
+    font-size: 26px;
+}
+
 .stage-hint {
     margin-top: 8px;
+    font-size: 17px;
+    line-height: 1.8;
 }
 
 .image-row {
     margin-top: 14px;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 12px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
     width: 100%;
     padding-bottom: 8px;
 }
@@ -237,7 +251,7 @@ button:disabled {
     background: #f8faff;
     border: 1px solid #d8e0ef;
     border-radius: 10px;
-    padding: 8px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -254,9 +268,9 @@ button:disabled {
 
 .rank-badge {
     font-weight: 700;
-    font-size: 16px;
+    font-size: 18px;
     color: #1d6cf0;
-    min-height: 20px;
+    min-height: 24px;
 }
 
 .image-wrapper {
@@ -277,7 +291,7 @@ button:disabled {
     right: 8px;
     border-radius: 6px;
     padding: 4px 8px;
-    font-size: 12px;
+    font-size: 14px;
     background: rgba(20, 31, 49, 0.78);
     color: #ffffff;
     z-index: 2;
@@ -297,7 +311,7 @@ button:disabled {
 
 .image-label {
     word-break: break-all;
-    font-size: 12px;
+    font-size: 14px;
     color: #3f4e63;
 }
 
@@ -313,6 +327,58 @@ button:disabled {
     border-radius: 6px;
     background: #f4f8ff;
     border: 1px solid #d4e1ff;
+}
+
+#info-text {
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+.breakpoint-panel {
+    margin-top: 14px;
+    padding: 18px;
+    border: 1px solid #d4e1ff;
+    border-radius: 6px;
+    background: #f4f8ff;
+}
+
+.breakpoint-panel h3 {
+    margin: 0 0 12px;
+    color: #243447;
+    font-size: 20px;
+}
+
+.breakpoint-question {
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+.breakpoint-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.breakpoint-option {
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    border: 2px solid #b9c7d8;
+    border-radius: 4px;
+    background: #ffffff;
+    color: #243447;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.breakpoint-option:hover,
+.breakpoint-option.selected {
+    border-color: #245d9c;
+    background: #245d9c;
+    color: #ffffff;
 }
 
 .modal {
