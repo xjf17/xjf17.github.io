@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>兼容性排序调研</title>
-    <link rel="stylesheet" href="./survey.css?v=e611f1b416f7">
+    <link rel="stylesheet" href="./survey.css?v=839e769a2517">
 </head>
 <body>
     <main class="container">
@@ -168,7 +168,11 @@
             <div id="breakpoint-panel" class="breakpoint-panel hidden">
                 <h3>协调与不协调的分界</h3>
                 <p id="breakpoint-question" class="breakpoint-question"></p>
-                <div id="breakpoint-options" class="breakpoint-options" role="radiogroup" aria-label="协调与不协调的分界序号"></div>
+                <div class="breakpoint-scale">
+                    <span class="breakpoint-label breakpoint-label-compatible">环境与历史建筑协调</span>
+                    <div id="breakpoint-options" class="breakpoint-options" role="radiogroup" aria-label="协调与不协调的分界序号"></div>
+                    <span class="breakpoint-label breakpoint-label-incompatible">环境与历史建筑不协调</span>
+                </div>
                 <div class="actions">
                     <button id="continue-info-btn" type="button">确认</button>
                 </div>
@@ -180,7 +184,7 @@
                 <p class="muted">在了解以上信息后，你是否需要调整排序？如果你觉得需要调整排序，则可再次拖拽调整，调整好后，点击“确认排序并下一题”，如果觉得不需要调整，则点击“不更改，下一题”。</p>
                 <div class="actions">
                     <button id="keep-order-btn" type="button">不更改，下一题</button>
-                    <button id="submit-final-btn" type="button">确认排序并下一题</button>
+                    <button id="submit-final-btn" type="button">已调整，确认排序并下一题</button>
                 </div>
             </div>
 
@@ -199,6 +203,6 @@
     </div>
 
     <script src="./config.js"></script>
-    <script src="./survey.js?v=940c35f6e994"></script>
+    <script src="./survey.js?v=d6bbe137afdc"></script>
 </body>
 </html>

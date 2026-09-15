@@ -178,6 +178,10 @@
                 state.breakpointRank = option.dataset.rank;
                 breakpointOptions.querySelectorAll(".breakpoint-option").forEach((item) => {
                     const selected = item === option;
+                    const rank = Number(item.dataset.rank);
+                    const boundary = Number(option.dataset.rank);
+                    item.classList.toggle("compatible", rank < boundary);
+                    item.classList.toggle("incompatible", rank >= boundary);
                     item.classList.toggle("selected", selected);
                     item.setAttribute("aria-checked", String(selected));
                 });
@@ -337,6 +341,13 @@
         const changed =
             !forceNoChange &&
             JSON.stringify(state.initialOrder) !== JSON.stringify(finalOrder);
+        if (!forceNoChange && !changed) {
+            setError(
+                surveyError,
+                "当前排序与第一次排序相同。请选择“不更改，下一题”，或再次拖拽修改后再确认。"
+            );
+            return;
+        }
 
         keepOrderBtn.disabled = true;
         submitFinalBtn.disabled = true;

@@ -275,13 +275,20 @@ button:disabled {
 
 .image-wrapper {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #edf1f5;
 }
 
 .image-thumb {
     width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    border-radius: 8px;
+    height: 100%;
+    object-fit: contain;
     display: block;
 }
 
@@ -355,11 +362,26 @@ button:disabled {
     line-height: 1.7;
 }
 
+.breakpoint-scale {
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr) max-content;
+    align-items: center;
+    gap: 14px;
+    margin-top: 14px;
+}
+
+.breakpoint-label {
+    color: #34475b;
+    font-size: 16px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
 .breakpoint-options {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 12px;
-    margin-top: 14px;
 }
 
 .breakpoint-option {
@@ -374,11 +396,25 @@ button:disabled {
     font-weight: 700;
 }
 
-.breakpoint-option:hover,
-.breakpoint-option.selected {
+.breakpoint-option:hover {
     border-color: #245d9c;
-    background: #245d9c;
-    color: #ffffff;
+}
+
+.breakpoint-option.compatible {
+    border-color: #6eaa82;
+    background: #dff2e5;
+    color: #225b35;
+}
+
+.breakpoint-option.incompatible {
+    border-color: #d18a8a;
+    background: #f8dddd;
+    color: #7c2929;
+}
+
+.breakpoint-option.selected {
+    border-color: #b44a4a;
+    box-shadow: 0 0 0 3px rgba(180, 74, 74, 0.2);
 }
 
 .modal {
