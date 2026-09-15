@@ -266,6 +266,7 @@
             heritage_interest: formData.get("heritage_interest"),
             relevant_experience_duration: formData.get("relevant_experience_duration"),
             heritage_related_experience: formData.get("heritage_related_experience"),
+            national_key_heritage_sites_visited: formData.get("national_key_heritage_sites_visited"),
             nationality: formData.get("nationality"),
         };
 

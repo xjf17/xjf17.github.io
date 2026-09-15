@@ -115,8 +115,23 @@
                         </div>
 
                         <div class="form-field form-field-wide">
+                            <label for="national-key-heritage-sites-visited">
+                                <span><span class="question-number">9</span>估计一下您去过的全国重点文物保护单位大约有<span class="required-mark">*</span></span>
+                            </label>
+                            <select id="national-key-heritage-sites-visited" name="national_key_heritage_sites_visited" required>
+                                <option value="" selected disabled>请选择</option>
+                                <option value="0-20个">0-20个</option>
+                                <option value="20-40个">20-40个</option>
+                                <option value="40-60个">40-60个</option>
+                                <option value="60-80个">60-80个</option>
+                                <option value="80-100个">80-100个</option>
+                                <option value="100个以上">100个以上</option>
+                            </select>
+                        </div>
+
+                        <div class="form-field form-field-wide">
                             <label for="nationality">
-                                <span><span class="question-number">9</span>您的国籍是<span class="required-mark">*</span></span>
+                                <span><span class="question-number">10</span>您的国籍是<span class="required-mark">*</span></span>
                             </label>
                             <input id="nationality" type="text" name="nationality" autocomplete="country-name" placeholder="请输入国籍" required>
                         </div>
@@ -184,6 +199,6 @@
     </div>
 
     <script src="./config.js"></script>
-    <script src="./survey.js?v=216e4bb0267c"></script>
+    <script src="./survey.js?v=940c35f6e994"></script>
 </body>
 </html>
